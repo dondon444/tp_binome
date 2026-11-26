@@ -1,3 +1,6 @@
+from secrets import choice
+
+
 expenses = []
 def add_expense():
     description = input ("Description : ")
@@ -28,7 +31,8 @@ def main():
         print("2. Afficher les depenses")
         print("3. Afficher le total")
         print("4. Quitter")
-        print("5. Show average")
+        print("5. Delete an expense")
+        print("6.Shox average")
         choice = input("Votre choix : ")
         if choice == "1":
             add_expense()
@@ -40,6 +44,8 @@ def main():
             print("Au revoir !")
             break
         elif choice == "5":
+            delete_expense()
+        elif choice == "6":
             show_average()
         else:
             print("Choix invalide.")
